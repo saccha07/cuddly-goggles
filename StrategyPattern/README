@@ -1,0 +1,5 @@
+Strategy Pattern: Defines a family of Algorithm, Encapsulate each one and makes them interchangesable. Strategy lets the algo vary independently from client that use it.
+Pattern show you how to build the system with good OO design.
+Pattern don't give you code they give general Solution to design problems.
+Pattern are not invented they are discovered.
+We often try to take what varies in a system and encapsulate it.
