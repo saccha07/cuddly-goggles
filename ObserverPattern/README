@@ -1,0 +1,4 @@
+Oberver Pattern kind of one to many dependency between object so that wen one object change the state all its dependent are notified and updated automatically
+1. the Observer pattern provided an object design where objects and observer are loosely coupled 
+3. loosely coupled designs allows us to build flexible OO system that can handle change because they minimize the interdependency between the objects.
+
