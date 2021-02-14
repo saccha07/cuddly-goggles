@@ -1,0 +1,12 @@
+OO PRINCIPLES
+    Encapsulate what varies
+    Favour Composition over inheritance
+    Program to interface not implementations
+    Strive for loosely coupled designs between objects that interacts
+    classes should be open for extension but closed for modification
+OO PATTERNS
+    Decorator- Attach additional responsbilities to an object dynamically. Decorator provide a flexible alternative to subclassing for extending functionality
+BULLET POINTS:
+    Compositions and delegation can often be used to add new behaviour at runtime.
+    Decorator Pattern involves a set of decorator classes that are used to wrap concerete component
+    Decorator can result in many small objects in our design, and overuse can be complex.
