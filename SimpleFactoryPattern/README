@@ -1,0 +1,26 @@
+when we use new we are doing always program to an implementation, not for interface, trying your code to conceret class can make it more fragile and less flexible
+FACTORY:
+    factories handle the details of object creation
+    Al factory pattern encapsulate the object creation by letting subclass decide what object to create
+    it will support paraller class hierarchies like in our e.g. PIzaaStore and Pizza are independen of each other
+Factory Method Pattern defined:
+    defines an interface for creating an object but lets subclass deside which class to instatiate.
+    depend upon abstraction, not depend upon concerete classes.
+The Abstract Factory Pattern:
+    provides an interface for creating families of related or dependent objects without specifying their concerete class
+Factory Method:
+    Object creation through Inheritance
+    Inherit the class and provide an implementation for a factory Method, Subclass to do creation for object, in that way clients only need to know abstract type they are using, subclass worries abt the concerete type
+    Use me to decoupled your client code from the concerete classes you need to instantitate. or if u don't know ahead of time all the conceret classes you are going to need. To use me just subclass me and implement my factory method.
+Abstract Factory:
+    Object creation through Composition
+    I provide an abstract type for creating a family of products, Subclasses of this type define how those product are produced, To use the factory you instantiate one and pass it into some code that is written against the abstract type
+    Group together a set of related products
+    Use me whenever you have families of products you need to create and you want to make sure your clients create products that belong together
+
+
+OO Principles:
+    Depend on abstractions. Do not depend on conceret classes
+OO Patterns:
+    AF: Provides an interface for creating families of related or dependent objects without specifying their concerete classes
+    FM: Define an interface for creating an object but let subclass decide which class to instantiate. FM lets a class defer instantiation subclass.
