@@ -1,0 +1,9 @@
+Singleton pattern ensures a class has only one instsnce and provides a global point of access to it.
+
+Synchronize the createInstance Method:
+    it will have performance impact becasue each time when we create try to create object synchronization will be called which is costly
+Use eager Instantiation:
+    we will alwyas going to instantiate as statically which is having no concern
+Double Checking lock:
+it is very good solution, no performance concern becayse sync will call only once
+    
