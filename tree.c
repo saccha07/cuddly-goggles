@@ -67,3 +67,118 @@ class Solution{
      }
     }
 };
+
+/*givet tree is BST or not */
+//{ Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+#define MAX_HEIGHT 100000
+
+// Tree Node
+struct Node {
+    int data;
+    Node *left;
+    Node *right;
+
+    Node(int val) {
+        data = val;
+        left = right = NULL;
+    }
+};
+
+
+
+
+// } Driver Code Ends
+class Solution
+{
+    public:
+    //Function to check whether a Binary Tree is BST or not.
+    bool isBSTUtil(Node *root, int min, int max)
+    {
+        if(root==NULL)
+        return 1;
+        if(root->data <min || root->data > max )
+        return 0;
+        cout<<"min : "<<min <<" Max: "<<max<<endl;
+        return isBSTUtil(root->left, min,root->data-1) && isBSTUtil(root->right, root->data+1, max);
+    }
+        
+    bool isBST(Node* root) 
+    {
+       //Node *prev=NULL;
+       return isBSTUtil(root, INT_MIN, INT_MAX);
+    }
+};
+
+/*Array to BST*/
+
+//{ Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+#define MAX_HEIGHT 100000
+
+// Tree Node
+struct Node {
+    int data;
+    Node *left;
+    Node *right;
+
+    Node(int val) {
+        data = val;
+        left = right = NULL;
+    }
+};
+
+
+
+
+// } Driver Code Ends
+class Solution
+{
+    public:
+    //Function to check whether a Binary Tree is BST or not.
+    bool isBSTUtil(Node *root, int min, int max)
+    {
+        if(root==NULL)
+        return 1;
+        if(root->data <min || root->data > max )
+        return 0;
+        cout<<"min : "<<min <<" Max: "<<max<<endl;
+        return isBSTUtil(root->left, min,root->data-1) && isBSTUtil(root->right, root->data+1, max);
+    }
+        
+    bool isBST(Node* root) 
+    {
+       //Node *prev=NULL;
+       return isBSTUtil(root, INT_MIN, INT_MAX);
+    }
+};
+
+/*largest value in a level of Tree*/
+class Solution
+{
+    public:
+    void helper(vector <int> &res, Node *root, int d)
+    {
+        if(root==NULL)
+        return;
+        if(d==res.size())
+        res.push_back(root->data);
+        else
+        {
+            res[d]=max(res[d], root->data);
+        }
+        
+        helper(res, root->left, d+1);
+        helper(res, root->right, d+1);
+    }
+    
+    vector<int> largestValues(Node* root)
+    {
+        vector<int> res;
+        helper(res, root, 0);
+        return res;
+        //code here
+    }
+};
