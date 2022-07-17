@@ -43,3 +43,27 @@ int diameter(struct Node* root) {
     int h = height(root, &ans);
     return ans;
 }
+
+/*Sum child Parent property*/
+class Solution{
+    public:
+    //Function to check whether all nodes of a tree have the value 
+    //equal to the sum of their child nodes.
+    int isSumProperty(Node *root)
+    {
+        int ld, rd;
+        // Add your code here
+        if(root==NULL || root->left==NULL || root->right == NULL) {
+            return 1;
+        }
+        if(root->left !=NULL)
+        ld=root->left->data;
+        if(root->right!=NULL)
+        rd=root->right->data;
+        if((root->data == ld+rd) && isSumProperty(root->left) 
+        && isSumProperty(root->right))
+     {
+         return 1;
+     }
+    }
+};
